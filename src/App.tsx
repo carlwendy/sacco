@@ -11,6 +11,8 @@ import { LoansPage } from './pages/admin/LoansPage';
 import { TransactionsPage } from './pages/admin/TransactionsPage';
 import { OnboardingPage } from './pages/admin/OnboardingPage';
 import { FinesPage } from './pages/admin/FinesPage';
+import { MobileMoneyPage } from './pages/admin/MobileMoneyPage';
+import { ReportsPage } from './pages/admin/ReportsPage';
 
 const ProtectedRoute: React.FC<{ children: React.ReactNode; requiredRole?: string }> = ({ 
   children, 
@@ -98,7 +100,7 @@ const AppRoutes: React.FC = () => {
         path="/admin/e-wallets"
         element={
           <ProtectedRoute requiredRole="admin">
-            <PlaceholderPage title="E-Wallet Integration" />
+            <MobileMoneyPage />
           </ProtectedRoute>
         }
       />
@@ -106,7 +108,7 @@ const AppRoutes: React.FC = () => {
         path="/admin/reports"
         element={
           <ProtectedRoute requiredRole="admin">
-            <PlaceholderPage title="Reports Generator" />
+            <ReportsPage />
           </ProtectedRoute>
         }
       />
