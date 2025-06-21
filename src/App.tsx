@@ -10,6 +10,7 @@ import { DepositsPage } from './pages/admin/DepositsPage';
 import { LoansPage } from './pages/admin/LoansPage';
 import { TransactionsPage } from './pages/admin/TransactionsPage';
 import { OnboardingPage } from './pages/admin/OnboardingPage';
+import { FinesPage } from './pages/admin/FinesPage';
 
 const ProtectedRoute: React.FC<{ children: React.ReactNode; requiredRole?: string }> = ({ 
   children, 
@@ -81,7 +82,7 @@ const AppRoutes: React.FC = () => {
         path="/admin/fines"
         element={
           <ProtectedRoute requiredRole="admin">
-            <PlaceholderPage title="Fines Management" />
+            <FinesPage />
           </ProtectedRoute>
         }
       />
