@@ -77,8 +77,15 @@ export const AdminDashboard: React.FC = () => {
 
   return (
     <div className="p-6">
-      {/* Header Card */}
-      <div className="flex items-center justify-between bg-white rounded-lg p-6 shadow-sm border border-gray-200 mb-6">
+      {/* Header Card with modern gradient & glow */}
+      <Card
+        variant="gradient"
+        interactive
+        glow
+        gradientDirection="diagonal"
+        className="flex items-center justify-between mb-6"
+        padding="lg"
+      >
         <div>
           <h1 className="text-2xl font-bold text-secondary-900">Admin Dashboard</h1>
           <p className="text-secondary-600 mt-1">
@@ -86,16 +93,16 @@ export const AdminDashboard: React.FC = () => {
           </p>
         </div>
         <div className="flex space-x-3">
-          <Button variant="outline" size="sm">
+          <Button variant="success" size="sm">
             <UserPlus className="h-4 w-4 mr-2" />
             Add Member
           </Button>
-          <Button size="sm">
+          <Button variant="info" size="sm">
             <TrendingUp className="h-4 w-4 mr-2" />
             View Reports
           </Button>
         </div>
-      </div>
+      </Card>
 
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
