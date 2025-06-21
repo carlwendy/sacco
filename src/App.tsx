@@ -13,6 +13,7 @@ import { OnboardingPage } from './pages/admin/OnboardingPage';
 import { FinesPage } from './pages/admin/FinesPage';
 import { MobileMoneyPage } from './pages/admin/MobileMoneyPage';
 import { ReportsPage } from './pages/admin/ReportsPage';
+import { SettingsPage } from './pages/admin/SettingsPage';
 
 const ProtectedRoute: React.FC<{ children: React.ReactNode; requiredRole?: string }> = ({ 
   children, 
@@ -148,7 +149,7 @@ const AppRoutes: React.FC = () => {
         path="/admin/settings"
         element={
           <ProtectedRoute requiredRole="admin">
-            <PlaceholderPage title="SACCO Settings & Configuration" />
+            <SettingsPage />
           </ProtectedRoute>
         }
       />
